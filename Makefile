@@ -2,9 +2,16 @@
 
 VERSION = 2025
 PATCHLEVEL = 07
-SUBLEVEL =
+SUBLEVEL = 1
 EXTRAVERSION = -rc1
-NAME =
+NAME = stm32h743xih6-fanke-uboot
+
+ARCH = arm
+CROSS_COMPILE = arm-linux-gnueabi-
+
+ifeq ($(shell which $(CROSS_COMPILE)gcc),)
+  $(error Cross-compile toolchain $(CROSS_COMPILE) not found. Please retry after installed.)
+endif
 
 # *DOCUMENTATION*
 # To see a list of typical targets execute "make help"

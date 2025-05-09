@@ -1,0 +1,7 @@
+STM32H743XIH6 FANKE BOARD
+M:	Rui Chuang <602664701@qq.com>
+S:	Maintained
+F:	doc/board/st/
+F:	board/st/stm32h743xih6-fanke
+F:	include/configs/stm32h743xih6-fanke.h
+F:	configs/stm32h743xih6-fanke_defconfig
