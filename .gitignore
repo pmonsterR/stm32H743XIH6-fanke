@@ -1,0 +1,15 @@
+#
+# Default
+#
+**
+
+#
+# Trace target
+#
+!.gitignore
+!Dockerfile
+!enter_docker_env.sh
+!simple_start.sh
+!LICENSE
+!README.md
+!CHANGELOG
