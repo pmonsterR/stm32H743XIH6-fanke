@@ -1,0 +1,14 @@
+#define RCC_RST_SHIFT(base, offset) (base * 8 + (offset))
+
+/* AHB3RSTR */
+#define RCC_AHB3RSTR	0x07C
+#define MDMA_RST        RCC_RST_SHIFT(RCC_AHB3RSTR, 0)
+#define DMA2D_RST       RCC_RST_SHIFT(RCC_AHB3RSTR, 4)
+#define JPGDEC_RST      RCC_RST_SHIFT(RCC_AHB3RSTR, 5)
+#define FMC_RST         RCC_RST_SHIFT(RCC_AHB3RSTR, 12)
+#define QUADSPI_RST     RCC_RST_SHIFT(RCC_AHB3RSTR, 14)
+#define SDMMC1_RST      RCC_RST_SHIFT(RCC_AHB3RSTR, 16)
+#define CPU_RST         RCC_RST_SHIFT(RCC_AHB3RSTR, 31)
+
+/* AHB1RSTR */
+//TODO

@@ -38,6 +38,19 @@
 			pinctrl-names = "default";
 			status = "okay";
 		};
+
+		qspi: spi@52005000 {
+                        compatible = "st,stm32h743-qspi";
+                        #address-cells = <1>;
+                        #size-cells = <0>;
+                        reg = <0x52005000 0x1000>, <0x90000000 0x10000000>;
+                        reg-names = "qspi", "qspi_mm";
+                        interrupts = <92>;
+                        spi-max-frequency = <200000000>;
+                        clocks = <&rcc QUADSPI_CK>;
+                        resets = <&rcc QUADSPI_RST>;
+                        pinctrl-0 = <&qspi_pins>;
+                };
 	};
 };
 

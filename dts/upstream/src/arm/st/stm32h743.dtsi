@@ -42,6 +42,7 @@
 
 #include "../armv7-m.dtsi"
 #include <dt-bindings/clock/stm32h7-clks.h>
+#include <dt-bindings/clock/stm32h7-clks-reset.h>
 #include <dt-bindings/mfd/stm32h7-rcc.h>
 #include <dt-bindings/interrupt-controller/irq.h>
 

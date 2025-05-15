@@ -29,6 +29,19 @@
 	};
 };
 
+&qspi {
+        reg = <0x52005000 0x1000>, <0x90000000 0x10000000>;
+        flash0: w25q64@0 {
+                #address-cells = <1>;
+                #size-cells = <1>;
+                compatible = "jedec,spi-nor";
+                spi-max-frequency = <80000000>;
+                spi-tx-bus-width = <4>;
+                spi-rx-bus-width = <4>;
+                reg = <0>;
+        };
+};
+
 &pinctrl {
 	fmc_pins: fmc@0 {
 		pins {
@@ -80,4 +93,16 @@
 			slew-rate = <3>;
 		};
 	};
+
+	qspi_pins: qspi@0 {
+                pins {
+                        pinmux = <STM32_PINMUX('F',10, AF9)>, /* CLK */
+                                 <STM32_PINMUX('G', 6, AF10)>, /* BK1_NCS */
+                                 <STM32_PINMUX('F', 8, AF10)>, /* BK1_IO0 */
+                                 <STM32_PINMUX('F', 9, AF10)>, /* BK1_IO1 */
+                                 <STM32_PINMUX('F', 7, AF9)>, /* BK1_IO2 */
+                                 <STM32_PINMUX('F', 6, AF9)>; /* BK1_IO3 */
+                        slew-rate = <2>;
+                };
+        };
 };
