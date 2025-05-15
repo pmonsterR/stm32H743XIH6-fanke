@@ -2,6 +2,7 @@
 
 topdir="$(dirname $(readlink -f "$0"))"
 d_workspace="$topdir/workspace"
+d_home="/home/fanke"
 
 required_cmds=(
     "which"
@@ -66,4 +67,4 @@ if [ ! -d "$d_workspace" ]; then
     fi
 fi
 
-docker run -ti --hostname stm32H743XIH6 --rm -e SETID=$(id -u) -v "$d_workspace:/home/fanke/workspace" ghcr.io/pmonsterr/docker_build_env:latest
+docker run -ti --hostname stm32H743XIH6 --rm -e SETID=$(id -u) -v "$d_workspace:$d_home/workspace" -v "$HOME/.gitconfig:$d_home/.gitconfig" -v "$HOME/.ssh:$d_home/.ssh" ghcr.io/pmonsterr/docker_build_env:latest

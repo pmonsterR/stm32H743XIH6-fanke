@@ -1,6 +1,6 @@
 [docker_build_env] Chang-log
 
-[v1.0.1] - [May 12th, 2025]
+[v1.0.1] - [May 15th, 2025]
 
 [Description]
     Update the docker image and provide an environment for compiling the uboot of the fanke vendor board.
@@ -10,6 +10,22 @@
     - You can use "sudo apt" to install more packages.
     - The mirror source used is the Tsinghua mirror source. If you need to restore the default, please operate manually.
     - If you need to compile the image yourself, you can use the provided Dockerfile.
+    - Mounted git config and ssh key to container when run.
+
+[Release Manager]
+    Rui Chung <602664701@qq.com>
+
+
+
+[v1.0.0] - [May 12th, 2025]
+
+[Description]
+    Initial git repository.
+
+[Release Notes]
+    - Base on ubuntu 24.04.
+    - Installed common packages.
+    - Add docker run script to enter container.
 
 [Release Manager]
     Rui Chung <602664701@qq.com>
